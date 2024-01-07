@@ -21,6 +21,7 @@ public class MemberRepositoryTest {
     @Test
     @Transactional
     public void testMember() throws Exception {
+
         //given
         Member member=new Member();
         member.setUsername("memberA");
@@ -32,6 +33,8 @@ public class MemberRepositoryTest {
         //then
         Assertions.assertThat(findMember.getId()).isEqualTo(member.getId());
         Assertions.assertThat(findMember.getUsername()).isEqualTo(member.getUsername());
+        Assertions.assertThat(findMember.getUsername()).isEqualTo(member.getUsername());
+
     }
 
 

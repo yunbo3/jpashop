@@ -1,5 +1,6 @@
 package jpabook.jpashop;
 
+import org.hibernate.boot.TempTableDdlTransactionHandling;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -13,5 +14,6 @@ public class JpashopApplicationTests {
 	@Test
 	void contextLoads() {
 	}
+
 
 }
