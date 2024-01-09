@@ -2,6 +2,7 @@ plugins {
 	id 'java'
 	id 'org.springframework.boot' version '2.6.3'
 	id 'io.spring.dependency-management' version '1.1.4'
+	id 'application'
 }
 
 group = 'jpabook'
@@ -10,7 +11,17 @@ version = '0.0.1-SNAPSHOT'
 java {
 	sourceCompatibility = '11'
 }
+// 메인 클래스를 지정합니다.
+application {
+	mainClass = 'JpashopApplication'
+}
 
+jar {
+	// 메인 클래스를 매니페스트에 추가합니다.
+	manifest {
+		attributes 'Main-Class': application.mainClass
+	}
+}
 configurations {
 	compileOnly {
 		extendsFrom annotationProcessor
